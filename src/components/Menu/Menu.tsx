@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from './Menu.module.css';
+import styles from './Menu.module.scss';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import logo from '../../../public/logo.svg';
