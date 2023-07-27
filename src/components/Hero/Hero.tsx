@@ -1,6 +1,6 @@
 import Menu from '@/components/Menu/Menu';
 import Image from 'next/image';
-import styles from './Hero.module.css';
+import styles from './Hero.module.scss';
 import HeroText from '../HeroText/HeroText';
 
 const HeroContainer = () => {
