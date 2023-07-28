@@ -5,13 +5,13 @@ import HeroText from '../HeroText/HeroText';
 
 const HeroContainer = () => {
     return (
-        <div className={styles.heroContainer}>
-            <Image src="/hero.jpg" fill alt="hero image" />
-            <div className={styles.layoutContainer}>
+        <>
+            <Image src="/hero1.png" fill alt="hero image" />
+            <div className={styles.heroContainer}>
                 <Menu></Menu>
                 <HeroText />
             </div>
-        </div>
+        </>
     );
 };
 
