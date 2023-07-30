@@ -1,0 +1,4 @@
+.aboutContainer {
+    border: 2px solid #f11b1b;
+    @include flex-centered(column, stretch, stretch);
+}

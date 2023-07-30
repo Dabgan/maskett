@@ -17,6 +17,7 @@
     position: relative;
     min-height: 350px;
     z-index: 1;
+    color: $secondary-font-color;
     @include media('tablet') {
         min-height: 300px;
         max-width: 400px;
@@ -34,9 +35,11 @@
     border: 1px solid $secondary-color;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    &:hover {
-        background: $secondary-color;
-        color: $main-color;
-        border-color: $main-color;
+    @include media('desktop') {
+        &:hover {
+            background: $secondary-color;
+            color: $main-color;
+            border-color: $main-color;
+        }
     }
 }

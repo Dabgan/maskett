@@ -1,0 +1,9 @@
+.layout {
+    max-width: $content-width;
+    padding: 0 $padding-m;
+    margin: 0 auto;
+    @include flex-centered(column, stretch, stretch);
+    @include media('tablet') {
+        padding: 0px $padding-l;
+    }
+}
