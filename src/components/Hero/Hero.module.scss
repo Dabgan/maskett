@@ -1,15 +1,22 @@
-/* .heroContainer {
-  
-} */
-
-.layoutContainer {
+.heroContainer {
     position: relative;
     width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto 0;
+    height: 100vh;
+    @include flex-centered(column, space-between, strech);
+    max-width: $content-width;
+    margin: 0 auto 0;
+    padding: 0 $padding-m;
+    text-align: center;
+    @include media('tablet') {
+        padding: 0px $padding-l;
+    }
+    @include media('tablet') {
+        text-align: initial;
+    }
+}
+.heroImage {
+    object-fit: cover;
+    @include media('custom', 1900) {
+        object-fit: fill;
+    }
 }

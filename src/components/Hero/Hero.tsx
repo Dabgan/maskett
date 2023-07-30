@@ -2,16 +2,25 @@ import Menu from '@/components/Menu/Menu';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 import HeroText from '../HeroText/HeroText';
+import heroImage from '../../../public/hero1.png';
 
 const HeroContainer = () => {
     return (
-        <div className={styles.heroContainer}>
-            <Image src="/hero.jpg" fill alt="hero image" />
-            <div className={styles.layoutContainer}>
+        <>
+            <Image
+                src={heroImage}
+                fill
+                alt="hero image"
+                quality={100}
+                placeholder="blur"
+                sizes="100vw"
+                className={styles.heroImage}
+            />
+            <div className={styles.heroContainer}>
                 <Menu></Menu>
                 <HeroText />
             </div>
-        </div>
+        </>
     );
 };
 

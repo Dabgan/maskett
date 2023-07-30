@@ -1,27 +1,42 @@
-.heroTextContainer {
-    z-index: 1;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: #384c6f;
-    font-weight: bold;
+.shadowWrapper {
     width: fit-content;
-    padding: 40px 50px;
-    border-radius: 20px;
-    display: flex;
-    flex-flow: column;
-    margin-bottom: 10%;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 80px 80px rgba(0, 0, 0, 0.4);
+    margin-bottom: $margin-xxl;
+    @include media('tablet') {
+        margin-bottom: 2 * $margin-xxl;
+    }
+    @include media('desktop') {
+        margin-bottom: 4 * $margin-xxl;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 80px 80px rgba(0, 0, 0, 0.2);
+    }
 }
-
-.title {
-    margin-bottom: 30px;
+.heroTextContainer {
+    @include flex-centered(column, space-between);
+    position: relative;
+    min-height: 350px;
+    z-index: 1;
+    @include media('tablet') {
+        min-height: 300px;
+        max-width: 400px;
+        align-items: flex-start;
+    }
 }
 
 .button {
-    padding: 15px 40px;
-    background: #384c6f;
+    background: $main-color;
+    color: $main-font-color;
+    padding: $padding-m $padding;
+    border: none;
     font-weight: bold;
     font-size: large;
-    color: orange;
-    border-radius: 20px;
-    border: none;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background: $secondary-color;
+        color: $main-color;
+        border-color: $main-color;
+    }
 }
