@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 1;
     margin-top: 20px;
     .logo {
         max-width: 120px;
@@ -24,7 +23,7 @@
         left: 0;
         transform: translate(100%);
         transition: transform 0.35s ease-in-out;
-        z-index: 1;
+        z-index: 2;
         a {
             margin-right: 1rem;
             text-decoration: none;
@@ -59,16 +58,18 @@
 }
 
 .hamburger {
-    z-index: 1;
     display: flex;
+    z-index: 2;
     .line {
         width: 36px;
         height: 5px;
         background-color: $main-color;
+        box-shadow: 0px 0px 0px 1px $secondary-color;
         margin: 2px;
         transition: all 0.3s ease;
     }
     .open.line {
+        box-shadow: none;
         &:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
