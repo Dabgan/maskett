@@ -6,15 +6,14 @@
         margin-top: $margin-l;
     }
     .logo {
-        max-width: 120px;
-        max-height: 30px;
+        width: $logo-width;
+        height: 30px;
     }
     .links {
         @include flex-centered(column, space-evenly, center);
         position: fixed;
         top: 0;
         left: 0;
-        padding: $padding-m;
         width: 100%;
         height: 100vh;
         background: $secondary-color;
@@ -27,36 +26,39 @@
             color: $main-color;
             font-size: xx-large;
             margin: 0 $margin;
+            padding: $padding-m;
+            &:hover {
+                text-shadow: 1px 1px 3px $main-color;
+            }
         }
         &.open {
             transform: translate(0);
         }
+        .active {
+            font-weight: bold;
+        }
+        @include media('desktop') {
+            @include flex-centered(row, center);
+            position: initial;
+            background: none;
+            transform: initial;
+            height: auto;
+            margin-right: $logo-width;
+            a {
+                color: $main-font-color;
+                font-size: large;
+            }
+        }
     }
 }
 
-// .logo a {
-//     font-weight: bold;
-//     text-decoration: none;
-//     color: #333;
-// }
-
-// .links {
-//     padding: 10px 20px;
-// }
-
-// .links .active {
-//     font-weight: 700;
-// }
-
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger {
-    display: flex;
+    @include flex-centered(column);
     z-index: 2;
+    cursor: pointer;
+    @include media('desktop') {
+        display: none;
+    }
     .line {
         width: 36px;
         height: 5px;

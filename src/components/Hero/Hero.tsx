@@ -14,7 +14,7 @@ const HeroContainer = () => {
                 quality={100}
                 placeholder="blur"
                 sizes="100vw"
-                style={{ objectFit: 'cover' }}
+                className={styles.heroImage}
             />
             <div className={styles.heroContainer}>
                 <Menu></Menu>

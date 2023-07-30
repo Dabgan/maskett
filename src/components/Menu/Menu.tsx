@@ -19,9 +19,9 @@ const Menu = () => {
 
     return (
         <nav className={styles.menu}>
-            <div className={styles.logo}>
+            <Link href={'/'} className={styles.logo}>
                 <Image src={logo} alt="company logo" className={styles.logo}></Image>
-            </div>
+            </Link>
             <ul className={`${styles.links} ${isMenuOpen ? styles.open : ''}`}>
                 <Link href="/" className={isActive('/')}>
                     Strona Główna

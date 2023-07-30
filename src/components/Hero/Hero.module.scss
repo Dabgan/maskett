@@ -10,31 +10,13 @@
     @include media('tablet') {
         padding: 0px $padding-l;
     }
-}
-
-.heroContainer::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0) 30%,
-        rgba(66, 66, 66, 0.65) 45%,
-        rgba(42, 42, 42, 0.65) 70%,
-        rgba(255, 255, 255, 0) 100%
-    );
     @include media('tablet') {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0) 35%,
-            rgba(66, 66, 66, 0.55) 60%,
-            rgba(42, 42, 42, 0.55) 70%,
-            rgba(255, 255, 255, 0) 100%
-        );
+        text-align: initial;
+    }
+}
+.heroImage {
+    object-fit: cover;
+    @include media('custom', 1900) {
+        object-fit: fill;
     }
 }
