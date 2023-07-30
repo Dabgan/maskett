@@ -55,6 +55,10 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
+    @include media('tablet') {
+        right: 2.5rem;
+        top: 2.5rem;
+    }
 }
 
 .hamburger {
