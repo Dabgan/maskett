@@ -1,18 +1,15 @@
 .heroTextContainer {
+    @include flex-centered(column, space-between);
     position: relative;
-    display: flex;
-    flex-flow: column;
     min-height: 350px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: $margin-xxl;
     z-index: 1;
 }
 
 .button {
     background: $main-color;
     color: $main-font-color;
-    padding: 15px 40px;
+    padding: $padding-m $padding;
     border: none;
     font-weight: bold;
     font-size: large;
